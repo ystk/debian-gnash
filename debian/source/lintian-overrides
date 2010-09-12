@@ -1,0 +1,3 @@
+# transition from swfdec to gnash
+gnash source: debhelper-but-no-misc-depends swfdec-gnome
+gnash source: debhelper-but-no-misc-depends swfdec-mozilla

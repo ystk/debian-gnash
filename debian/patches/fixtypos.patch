@@ -1,0 +1,384 @@
+Description: This patch fixes typos.
+Forwarded: https://savannah.gnu.org/bugs/index.php?30876
+Author: Gabriele Giacone <1o5g4r8o@gmail.com>
+
+--- trunk~/cygnal/crc.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/crc.cpp	2010-08-26 06:13:08.000000000 +0200
+@@ -120,7 +120,7 @@
+ ///
+ /// @param filespec The path and file name of the disk file to parse.
+ ///
+-/// @return True if the file was parsed sucessfully, false if not.
++/// @return True if the file was parsed successfully, false if not.
+ bool
+ CRcInitFile::parseFile(const std::string& filespec)
+ {
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/crc.h trunk/cygnal/crc.h
+--- trunk~/cygnal/crc.h	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/crc.h	2010-08-26 06:15:08.000000000 +0200
+@@ -57,7 +57,7 @@
+     ///
+     /// @param filespec The path and file name of the disk file to parse.
+     ///
+-    /// @return True if the file was parsed sucessfully, false if not.
++    /// @return True if the file was parsed successfully, false if not.
+     bool parseFile(const std::string& filespec);
+ 
+     /// Accessors
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/libnet/diskstream.cpp trunk/cygnal/libnet/diskstream.cpp
+--- trunk~/cygnal/libnet/diskstream.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/libnet/diskstream.cpp	2010-08-26 06:13:46.000000000 +0200
+@@ -591,7 +591,7 @@
+ /// @param filespec The full path and file name for the data to be
+ ///	read.
+ ///
+-/// @return True if the file was opened sucessfully, false if not.
++/// @return True if the file was opened successfully, false if not.
+ bool
+ DiskStream::open(const string &filespec)
+ {
+@@ -607,7 +607,7 @@
+ ///
+ /// @param netfd An optional file descriptor to read data from
+ ///
+-/// @return True if the file was opened sucessfully, false if not.
++/// @return True if the file was opened successfully, false if not.
+ bool
+ DiskStream::open(const string &filespec, int /*netfd*/)
+ {
+@@ -628,7 +628,7 @@
+ /// @param statistics The optional data structure to use for
+ ///	collecting statistics on this stream.
+ ///
+-/// @return True if the file was opened sucessfully, false if not.
++/// @return True if the file was opened successfully, false if not.
+ bool
+ DiskStream::open(const string &filespec, int netfd, Statistics &statistics)
+ {
+@@ -679,7 +679,7 @@
+ 
+ /// \brief Stream the file that has been loaded,
+ ///
+-/// @return True if the data was streamed sucessfully, false if not.
++/// @return True if the data was streamed successfully, false if not.
+ bool
+ DiskStream::play()
+ {
+@@ -702,7 +702,7 @@
+ ///
+ /// @param flag True to only send the first packet, False plays entire file.
+ ///
+-/// @return True if the data was streamed sucessfully, false if not.
++/// @return True if the data was streamed successfully, false if not.
+ bool
+ DiskStream::play(int netfd, bool flag)
+ {
+@@ -831,7 +831,7 @@
+ ///
+ /// @param quantity The number of frames to stream..
+ ///
+-/// @return True if the thumbnails were streamed sucessfully, false if not.
++/// @return True if the thumbnails were streamed successfully, false if not.
+ bool
+ DiskStream::preview(const string & /*filespec*/, int /*frames*/)
+ {
+@@ -852,7 +852,7 @@
+ ///
+ /// @param quantity The number of thumbnails to stream..
+ ///
+-/// @return True if the thumbnails were streamed sucessfully, false if not.
++/// @return True if the thumbnails were streamed successfully, false if not.
+ bool
+ DiskStream::thumbnail(const string & /*filespec*/, int /*quantity*/)
+ {
+@@ -865,7 +865,7 @@
+ 
+ /// \brief Pause the stream currently being played.
+ ///
+-/// @return True if the stream was paused sucessfully, false if not.
++/// @return True if the stream was paused successfully, false if not.
+ bool
+ DiskStream::pause()
+ {
+@@ -899,7 +899,7 @@
+ ///
+ /// @param filespec The file name for the data to be written.
+ ///
+-/// @return True if the file was uploaded sucessfully, false if not.
++/// @return True if the file was uploaded successfully, false if not.
+ bool
+ DiskStream::upload(const string & /*filespec*/)
+ {
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/libnet/diskstream.h trunk/cygnal/libnet/diskstream.h
+--- trunk~/cygnal/libnet/diskstream.h	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/libnet/diskstream.h	2010-08-26 06:14:51.000000000 +0200
+@@ -106,7 +106,7 @@
+     /// @param statistics The optional data structure to use for
+     ///		collecting statistics on this stream.
+     ///
+-    /// @return True if the file was opened sucessfully, false if not.
++    /// @return True if the file was opened successfully, false if not.
+     DSOEXPORT bool open(const std::string &filespec);
+     DSOEXPORT bool open(const std::string &filespec, int netfd);
+     DSOEXPORT bool open(const std::string &filespec, int netfd, gnash::Statistics  &statistics);
+@@ -117,7 +117,7 @@
+     ///
+     /// @param flag True to play the entire file, false to play part.
+     ///
+-    /// @return True if the data was streamed sucessfully, false if not.
++    /// @return True if the data was streamed successfully, false if not.
+     bool play();
+     bool play(bool flag);
+     bool play(int netfd, bool flag);
+@@ -132,7 +132,7 @@
+     ///
+     /// @param quantity The number of frames to stream..
+     ///
+-    /// @return True if the thumbnails were streamed sucessfully, false if not.
++    /// @return True if the thumbnails were streamed successfully, false if not.
+     bool preview(const std::string &filespec, int frames);
+     
+     /// \brief Stream a series of thumbnails.
+@@ -145,12 +145,12 @@
+     ///
+     /// @param quantity The number of thumbnails to stream..
+     ///
+-    /// @return True if the thumbnails were streamed sucessfully, false if not.
++    /// @return True if the thumbnails were streamed successfully, false if not.
+     bool thumbnail(const std::string &filespec, int quantity);
+     
+     /// \brief Pause the stream currently being played.
+     ///
+-    /// @return True if the stream was paused sucessfully, false if not.
++    /// @return True if the stream was paused successfully, false if not.
+     bool pause();
+     
+     /// \brief Seek within the stream.
+@@ -169,7 +169,7 @@
+     ///
+     /// @param filespec The file name for the data to be written.
+     ///
+-    /// @return True if the file was uploaded sucessfully, false if not.
++    /// @return True if the file was uploaded successfully, false if not.
+     bool upload(const std::string &filespec);
+     
+     // Stream a single "real-time" source.
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/libnet/network.cpp trunk/cygnal/libnet/network.cpp
+--- trunk~/cygnal/libnet/network.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/libnet/network.cpp	2010-08-26 06:12:04.000000000 +0200
+@@ -353,9 +353,9 @@
+             return 1;
+         }
+ 	
+-        // If interupted by a system call, try again
++        // If interrupted by a system call, try again
+         if (ret == -1 && errno == EINTR) {
+-            log_debug(_("The accept() socket for fd #%d was interupted by a system call"), fd);
++            log_debug(_("The accept() socket for fd #%d was interrupted by a system call"), fd);
+         }
+ 
+         if (ret == -1) {
+@@ -440,9 +440,9 @@
+ 
+         ret = ::select(_sockfd+1, &fdset, NULL, NULL, &tval);
+ 
+-        // If interupted by a system call, try again
++        // If interrupted by a system call, try again
+         if (ret == -1 && errno == EINTR) {
+-	    log_debug(_("The connect() socket for fd %d was interupted by a system call"),
++	    log_debug(_("The connect() socket for fd %d was interrupted by a system call"),
+ 		      _sockfd);
+ 	    continue;
+ 	}
+@@ -598,7 +598,7 @@
+ 
+         ret = ::select(_sockfd+1, &fdset, NULL, NULL, &tval);
+ 
+-        // If interupted by a system call, try again
++        // If interrupted by a system call, try again
+         if (ret == -1 && errno == EINTR) {
+             log_debug(_("The connect() socket for fd %d was interrupted "
+                         "by a system call"), _sockfd);
+@@ -937,9 +937,9 @@
+ #endif
+ 	}
+ 
+-        // If interupted by a system call, try again
++        // If interrupted by a system call, try again
+         if (ret == -1 && errno == EINTR) {
+-            log_error (_("The socket for fd #%d was interupted by a system call"), fd);
++            log_error (_("The socket for fd #%d was interrupted by a system call"), fd);
+         }
+ 
+         if (ret == -1) {
+@@ -1111,9 +1111,9 @@
+         ret = select(fd+1, NULL, &fdset, NULL, &tval);
+ #endif
+ 	
+-        // If interupted by a system call, try again
++        // If interrupted by a system call, try again
+         if (ret == -1 && errno == EINTR) {
+-            log_error (_("The socket for fd #%d was interupted by a system call"), fd);
++            log_error (_("The socket for fd #%d was interrupted by a system call"), fd);
+         }
+ 
+         if (ret == -1) {
+@@ -1443,9 +1443,9 @@
+     tval.tv_usec = timeout * 1000; // was 1000000
+     int ret = select(limit+1, &fdset, NULL, NULL, &tval);
+ #endif
+-    // If interupted by a system call, try again
++    // If interrupted by a system call, try again
+     if (ret == -1 && errno == EINTR) {
+-	log_error (_("Waiting for data was interupted by a system call"));
++	log_error (_("Waiting for data was interrupted by a system call"));
+     }
+     
+     if (ret == -1) {
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/libnet/rtmp_client.cpp trunk/cygnal/libnet/rtmp_client.cpp
+--- trunk~/cygnal/libnet/rtmp_client.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/libnet/rtmp_client.cpp	2010-08-26 06:14:04.000000000 +0200
+@@ -347,7 +347,7 @@
+ 	    boost::shared_ptr<RTMPMsg> msg = msgque.front();
+ 	    msgque.pop_front();
+ 	    if (msg->getStatus() ==  RTMPMsg::NC_CONNECT_SUCCESS) {
+-		log_network("Sent NetConnection Connect message sucessfully");
++		log_network("Sent NetConnection Connect message successfully");
+ 	    }		    
+ 	    if (msg->getStatus() ==  RTMPMsg::NC_CONNECT_FAILED) {
+ 		log_error("Couldn't send NetConnection Connect message,");
+@@ -703,7 +703,7 @@
+ 	_connected = false;
+     }
+ 
+-    // Since the handshake completed sucessfully, we're connected.
++    // Since the handshake completed successfully, we're connected.
+     _connected = true;
+ 
+     return handshake1;
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/libbase/curl_adapter.cpp trunk/libbase/curl_adapter.cpp
+--- trunk~/libbase/curl_adapter.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/libbase/curl_adapter.cpp	2010-08-26 06:09:10.000000000 +0200
+@@ -678,7 +678,7 @@
+         {
+             if ( errno == EINTR )
+             {
+-                // we got interupted by a signal
++                // we got interrupted by a signal
+                 // let's consider this as a timeout
+ #ifdef GNASH_CURL_VERBOSE
+                 log_debug("select() was interrupted by a signal");
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/libcore/parser/SWFMovieDefinition.cpp trunk/libcore/parser/SWFMovieDefinition.cpp
+--- trunk~/libcore/parser/SWFMovieDefinition.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/libcore/parser/SWFMovieDefinition.cpp	2010-08-26 06:07:55.000000000 +0200
+@@ -166,7 +166,7 @@
+ 
+ SWFMovieDefinition::~SWFMovieDefinition()
+ {
+-    // Request cancelation of the loading thread
++    // Request cancellation of the loading thread
+     _loadingCanceled = true;
+ }
+ 
+@@ -486,7 +486,7 @@
+         while (left) {
+ 
+             if (_loadingCanceled) {
+-                log_debug("Loading thread cancelation requested, "
++                log_debug("Loading thread cancellation requested, "
+                         "returning from read_all_swf");
+                 return;
+             }
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/libcore/parser/SWFMovieDefinition.h trunk/libcore/parser/SWFMovieDefinition.h
+--- trunk~/libcore/parser/SWFMovieDefinition.h	2010-08-07 17:50:00.000000000 +0200
++++ trunk/libcore/parser/SWFMovieDefinition.h	2010-08-26 06:08:21.000000000 +0200
+@@ -529,7 +529,7 @@
+         _bytes_loaded=bytes;
+     }
+ 
+-    /// A flag set to true when load cancelation is requested
++    /// A flag set to true when load cancellation is requested
+     bool _loadingCanceled;
+ 
+     /// Movies we import resources from
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/ChangeLog-0.8.5 trunk/ChangeLog-0.8.5
+--- trunk~/ChangeLog-0.8.5	2010-08-07 17:50:00.000000000 +0200
++++ trunk/ChangeLog-0.8.5	2010-08-26 07:43:12.000000000 +0200
+@@ -2977,7 +2977,7 @@
+ 
+ 2008-12-14  Rob Savoye   <rob@welcomehome.org>
+ 
+-	don't toggle done for non-persistant connections.
++	don't toggle done for non-persistent connections.
+ 
+ 2008-12-14  Rob Savoye   <rob@welcomehome.org>
+ 
+@@ -3297,7 +3297,7 @@
+ 
+ 2008-11-21  Rob Savoye   <rob@welcomehome.org>
+ 
+-	handle persistant and non persistant network connections based on the Keep-Alive fields.
++	handle persistent and non persistent network connections based on the Keep-Alive fields.
+ 
+ 2008-11-21  Rob Savoye   <rob@welcomehome.org>
+ 
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/ChangeLog-0.8.6 trunk/ChangeLog-0.8.6
+--- trunk~/ChangeLog-0.8.6	2010-08-07 17:50:00.000000000 +0200
++++ trunk/ChangeLog-0.8.6	2010-08-26 07:42:44.000000000 +0200
+@@ -148,7 +148,7 @@
+ 
+ 2009-09-06  Rob Savoye  <rob@welcomehome.org>
+ 
+-	close the network in the right places. Pass the Protocol handler to the thread so it's persistant.
++	close the network in the right places. Pass the Protocol handler to the thread so it's persistent.
+ 
+ 2009-09-06  Rob Savoye  <rob@welcomehome.org>
+ 
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/ChangeLog trunk/cygnal/ChangeLog
+--- trunk~/cygnal/ChangeLog	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/ChangeLog	2010-08-26 07:42:05.000000000 +0200
+@@ -58,7 +58,7 @@
+ 	* cygnal.cpp: Run forever, restarting connections after the
+ 	disconnect.
+ 	* handler.cpp: Trap mutex errors.
+-	* http.cpp: Tweak the handling of persistant connections.  Add
++	* http.cpp: Tweak the handling of persistent connections.  Add
+ 	statistics gathering.
+ 	
+ 	* buffer.cpp, cque.cpp: Turn off overly verbose debug now that
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/cygnal.cpp trunk/cygnal/cygnal.cpp
+--- trunk~/cygnal/cygnal.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/cygnal.cpp	2010-08-26 07:41:12.000000000 +0200
+@@ -1085,7 +1085,7 @@
+ 			  hand->removeClient(args->netfd);
+ 			  done = true;
+ 		      } else {
+-			  log_network("Not Done with HTTP connection for fd #%d, it's a persistant connection.", i);
++			  log_network("Not Done with HTTP connection for fd #%d, it's a persistent connection.", i);
+ 			  
+ 		      }
+ 		      continue;
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/http_server.cpp trunk/cygnal/http_server.cpp
+--- trunk~/cygnal/http_server.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/http_server.cpp	2010-08-26 07:41:43.000000000 +0200
+@@ -967,7 +967,7 @@
+ 		    }
+ 		    // log_debug("Requesting file: \"%s\"", _filespec);
+ 
+-		    // HTTP 1.1 enables persistant network connections
++		    // HTTP 1.1 enables persistent network connections
+ 		    // by default.
+ 		    if (_version.minor > 0) {
+ 			log_debug("Enabling Keep Alive by default for HTTP > 1.0");
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' trunk~/cygnal/libnet/http.cpp trunk/cygnal/libnet/http.cpp
+--- trunk~/cygnal/libnet/http.cpp	2010-08-07 17:50:00.000000000 +0200
++++ trunk/cygnal/libnet/http.cpp	2010-08-26 07:41:32.000000000 +0200
+@@ -219,7 +219,7 @@
+ 		    }
+ 		    log_debug("Requesting file: \"%s\"", _filespec);
+ 
+-		    // HTTP 1.1 enables persistant network connections
++		    // HTTP 1.1 enables persistent network connections
+ 		    // by default.
+ 		    if (_version.minor > 0) {
+ 			log_debug("Enabling Keep Alive by default for HTTP > 1.0");

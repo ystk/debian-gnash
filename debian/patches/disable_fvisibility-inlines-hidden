@@ -1,0 +1,18 @@
+
+This breaks build on powerpc in etch.
+
+https://savannah.gnu.org/bugs/?22753
+
+Thanks to Sylvain Beucler for finding the problem.
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -2742,7 +2742,7 @@ AC_DEFUN([CHECK_VISIBILITY_GCC_BUG],
+   ]
+ )
+ 
+-CHECK_VISIBILITY_GCC_BUG
++dnl CHECK_VISIBILITY_GCC_BUG
+ 
+ 
+ if test x$ac_cv_gcc_visibility_bug = xno; then

@@ -1,0 +1,4 @@
+tmp/usr/lib/kde4/libklashpart.so usr/lib/kde4/
+tmp/usr/lib/kde4/libklashpart.la usr/lib/kde4/
+tmp/usr/share/kde4/apps/klash usr/share/kde4/apps/
+tmp/usr/share/kde4/services/[Kk]lash* usr/share/kde4/services/

@@ -1,0 +1,19 @@
+# See: http://bugs.debian.org/571319
+
+Index: gnash-0.8.8~bzr20100809.2250/utilities/dumpshm.cpp
+===================================================================
+--- gnash-0.8.8~bzr20100809.2250.orig/utilities/dumpshm.cpp	2010-08-09 23:30:37.000000000 +0000
++++ gnash-0.8.8~bzr20100809.2250/utilities/dumpshm.cpp	2010-08-09 23:36:24.000000000 +0000
+@@ -319,9 +319,9 @@
+             log_debug(_("Found it! \"set LCShmKey %s\" in your ~/.gnashrc"),
+                         boost::io::group(hex, showbase,
+                             shmseg.shm_perm.IPC_PERM_KEY));
+-            log_debug(_("Last changed on: %s"), ctime(&shmseg.shm_ctime))));
+-            log_debug(_("Last attached on: %s"), ctime(&shmseg.shm_atime))));
+-            log_debug(_("Last detached on: %s"), ctime(&shmseg.shm_dtime))));
++            log_debug(_("Last changed on: %s"), ctime(&shmseg.shm_ctime));
++            log_debug(_("Last attached on: %s"), ctime(&shmseg.shm_atime));
++            log_debug(_("Last detached on: %s"), ctime(&shmseg.shm_dtime));
+             return shmseg.shm_perm.IPC_PERM_KEY;
+         }
+ #endif    // end of IPC_PERM_KEY

@@ -1,0 +1,30 @@
+Description: This patch sets release version in all shared objects
+Author: Miriam Ruiz <little_miry@yahoo.es>
+
+---
+Index: gnash-0.8.8~bzr20100809.2250/cygnal/libnet/Makefile.am
+===================================================================
+--- gnash-0.8.8~bzr20100809.2250.orig/cygnal/libnet/Makefile.am	2010-08-09 23:30:37.000000000 +0000
++++ gnash-0.8.8~bzr20100809.2250/cygnal/libnet/Makefile.am	2010-08-09 23:36:24.000000000 +0000
+@@ -34,6 +34,8 @@
+ 	$(PTHREAD_LIBS) \
+ 	$(NULL)
+ 
++libgnashnet_la_LDFLAGS =  -release $(VERSION) ${AM_LDFLAGS} 
++
+ localedir = $(datadir)/locale
+ 
+ INCLUDES = \
+Index: gnash-0.8.8~bzr20100809.2250/librender/Makefile.am
+===================================================================
+--- gnash-0.8.8~bzr20100809.2250.orig/librender/Makefile.am	2010-08-09 23:30:37.000000000 +0000
++++ gnash-0.8.8~bzr20100809.2250/librender/Makefile.am	2010-08-09 23:36:24.000000000 +0000
+@@ -69,6 +69,8 @@
+ libgnashrender_la_LIBADD = $(LIBVA_LIBS) $(LIBVA_X11_LIBS) $(LIBVA_GLX_LIBS)
+ libgnashrender_la_SOURCES = PathParser.cpp
+ 
++libgnashrender_la_LDFLAGS =  -release $(VERSION) ${AM_LDFLAGS} 
++
+ if BUILD_OGL_RENDERER
+ libgnashrender_la_SOURCES += Renderer_ogl.cpp
+ libgnashrender_la_LIBADD += $(OPENGL_LIBS)

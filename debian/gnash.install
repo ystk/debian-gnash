@@ -1,0 +1,3 @@
+tmp/usr/bin/gtk-gnash usr/bin/
+tmp/etc/gnashrc etc/
+gnash.desktop usr/share/applications/

@@ -1,0 +1,6 @@
+disable_fvisibility-inlines-hidden
+#build_on_ia64.patch
+#sh4_support.patch
+release_version.patch
+fixinfodocs.patch
+fixtypos.patch

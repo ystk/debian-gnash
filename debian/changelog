@@ -1,3 +1,12 @@
+gnash (0.8.8-5+squeeze1) stable-security; urgency=high
+
+  * Fix CVE-2012-1175 (Closes: #664023).
+  * Fix CVE-2010-4337 (Closes: #605419).
+  * Fix CVE-2011-4328 (Closes: #649384).
+    + Add libboost-iostreams-dev as B-D.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Thu, 15 Mar 2012 08:51:14 +0000
+
 gnash (0.8.8-5) unstable; urgency=low
 
   [ Gabriele Giacone ]

@@ -4,3 +4,6 @@ disable_fvisibility-inlines-hidden
 release_version.patch
 fixinfodocs.patch
 fixtypos.patch
+00CVE-2012-1175
+01CVE-2010-4337
+02CVE-2011-4328
